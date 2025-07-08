@@ -8,13 +8,8 @@
         content="Soluções em automação industrial, retrofit, células robóticas e segurança no trabalho. Atendemos Rio Negro e região.">
     <title>Naka Automation - Automação Industrial e Segurança no Trabalho</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
-        (function () {
-            // 🔑 Coloque sua PUBLIC KEY do EmailJS aqui
-            emailjs.init("sl84tmgCOQ8QlU9ym");
-        })();
-
         /*
     =======================================
     🎨 CONFIGURAÇÃO DE CORES DO SITE
@@ -907,24 +902,24 @@
 
             <div class="flex flex-col lg:flex-row gap-10">
                 <div class="lg:w-1/2">
-                    <form id="forEmail" class="bg-gray-100 p-8 rounded-lg shadow-md">
+                    <form id="contact-form" class="bg-gray-100 p-8 rounded-lg shadow-md">
                         <div class="mb-6">
                             <label for="name" class="block text-gray-700 font-medium mb-2">Nome</label>
-                            <input type="text" id="name" name="name"
+                            <input type="text" id="name"
                                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-naka-yellow"
                                 placeholder="Seu nome completo">
                         </div>
 
                         <div class="mb-6">
                             <label for="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
-                            <input type="email" id="email" name="email"
+                            <input type="email" id="email"
                                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-naka-yellow"
                                 placeholder="seu@email.com">
                         </div>
 
                         <div class="mb-6">
                             <label for="phone" class="block text-gray-700 font-medium mb-2">Telefone</label>
-                            <input type="tel" id="phone" name="phone"
+                            <input type="tel" id="phone"
                                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-naka-yellow"
                                 placeholder="(00) 00000-0000">
                         </div>
@@ -955,264 +950,293 @@
                         </button>
 
                         <p class="text-center text-sm text-gray-500 mt-4">
-                            Entraremos em contato o mais breve possível!
+                            Entraremos em contato o mais breve possível.
                         </p>
                     </form>
                 </div>
 
-                <!-- Script de envio de e-mail -->
-                <script>
-                    document.getElementById('formEmail').addEventListener('submit', function (event) {
-                        event.preventDefault();
+                <div class="lg:w-1/2">
+                    <div class="bg-naka-black text-white p-8 rounded-lg shadow-md h-full"
+                        style="background: linear-gradient(135deg, #3B1F4B, #121212);">
+                        <!-- Cor fundo caixa de contato -->
+                        <h3 class="text-2xl font-bold mb-6 text-naka-yellow">Informações de Contato</h3>
 
-                        emailjs.sendForm(
-                            'contato_naka', // 🔧SERVICE ID aqui
-                            'template_itxfyw9', // 🔧TEMPLATE ID aqui
-                            this
-                        ).then(function () {
-                            alert('E-mail enviado com sucesso!');
-                            document.getElementById('formEmail').reset();
-                        }, function (error) {
-                            alert('Ocorreu um erro ao enviar o e-mail: ' + JSON.stringify(error));
-                        });
-                    });
-                </script>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-naka-yellow rounded-full p-3 mr-4">
+                                    <svg class="w-6 h-6 text-naka-black" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                        </path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">Endereço</h4>
+                                    <p class="text-gray-300">R. Boleslau Paluch, 363 - Campo do Gado</p>
+                                    <p class="text-gray-300">Rio Negro - PR, 83880-000</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-naka-yellow rounded-full p-3 mr-4">
+                                    <svg class="w-6 h-6 text-naka-black" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">Telefone</h4>
+                                    <p class="text-gray-300">(47) 992553634</p>
+                                    <p class="text-gray-300">(47) 991553634 (WhatsApp)</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-naka-yellow rounded-full p-3 mr-4">
+                                    <svg class="w-6 h-6 text-naka-black" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">E-mail</h4>
+                                    <p class="text-gray-300">vendas@nakautomacao.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-naka-yellow rounded-full p-3 mr-4">
+                                    <svg class="w-6 h-6 text-naka-black" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-1">Horário de Atendimento</h4>
+                                    <p class="text-gray-300">Segunda a Sexta: 8h às 18h</p>
+                                    <p class="text-gray-300">Sábado: 8h às 12h</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-10">
+                            <h4 class="font-bold text-lg mb-4">Siga-nos nas redes sociais</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://www.linkedin.com/company/naka-automation/"
+                                    class="bg-naka-gray hover:bg-naka-yellow hover:text-naka-black transition-colors duration-300 w-10 h-10 rounded-full flex items-center justify-center">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://www.instagram.com/nakautomacao/"
+                                    class="bg-naka-gray hover:bg-naka-yellow hover:text-naka-black transition-colors duration-300 w-10 h-10 rounded-full flex items-center justify-center">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-naka-yellow">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl md:text-3xl font-bold text-naka-black mb-2">Pronto para transformar sua
+                        produção?</h3>
+                    <p class="text-naka-black text-lg">Entre em contato hoje mesmo e solicite uma visita técnica
+                        gratuita.</p>
+                </div>
+                <div>
+                    <a href="#contact"
+                        class="bg-naka-black text-naka-yellow px-8 py-3 rounded-full font-bold inline-flex items-center hover:bg-naka-gray transition duration-300">
+                        Fale com um Especialista
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white py-10" style="background: linear-gradient(135deg, #3B1F4B, #121212);">
+        <!-- Cor fundo rodapé -->
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <div class="text-naka-yellow font-bold text-3xl mr-2">NAKA</div>
+                        <div class="text-white font-light text-xl">AUTOMATION</div>
+                    </div>
+                    <p class="text-gray-400 mt-2">Tecnologia, Inovação e Segurança para sua Indústria</p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="#home" class="hover:text-naka-yellow transition">Início</a>
+                    <a href="#about" class="hover:text-naka-yellow transition">Quem Somos</a>
+                    <a href="#services" class="hover:text-naka-yellow transition">Serviços</a>
+                    <a href="#safety" class="hover:text-naka-yellow transition">Segurança</a>
+                    <a href="#contact" class="hover:text-naka-yellow transition">Contato</a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-naka-yellow font-bold mb-4">Serviços</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-naka-yellow transition">Automação
+                                Industrial</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-naka-yellow transition">Células
+                                Robóticas</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-naka-yellow transition">Máquinas e
+                                Esteiras</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-naka-yellow transition">Retrofit de
+                                Máquinas</a></li>
+                        <li><a href="#safety" class="text-gray-400 hover:text-naka-yellow transition">Adequação às
+                                Normas</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-naka-yellow font-bold mb-4">Contato</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-naka-yellow mr-2" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                </path>
+                            </svg>
+                            <span class="text-gray-400">(47) 991553634</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-naka-yellow mr-2" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            <span class="text-gray-400">vendas@nakautomacao.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-naka-yellow mr-2" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span class="text-gray-400">Rio Negro - PR</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr class="border-gray-800 my-8">
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2025 Naka Automation. Todos os direitos reservados.
+                </p>
+
+                <div class="flex space-x-6">
+                    <a href="https://www.linkedin.com/company/naka-automation/"
+                        class="text-gray-400 hover:text-naka-yellow transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/nakautomacao/"
+                        class="text-gray-400 hover:text-naka-yellow transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-6 right-6 bg-naka-yellow text-naka-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-naka-yellow-dark">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        <!-- EmailJS SDK -->
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+            (function () {
+                emailjs.init("sl84tmgCOQ8QlU9ym"); // Chave pública
+
+            function enviarEmail(e) {
+                e.preventDefault();
+
+            emailjs.sendForm("service_5ja0kno", "template_w90eyvi", e.target)
+            .then(function (response) {
+                alert("Mensagem enviada com sucesso!");
+            e.target.reset();
+        })
+            .catch(function (error) {
+                alert("Erro ao enviar mensagem. Tente novamente.");
+            console.log(error);
+        });
+    }
+
+            // Torna a função global para funcionar com onsubmit
+            window.enviarEmail = enviarEmail;
+  })();
+    </script>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+            (function () {
+                emailjs.init("sl84tmgCOQ8QlU9ym"); // Chave pública
+
+            function enviarEmail(e) {
+                e.preventDefault();
+
+            emailjs.sendForm("service_5ja0kno", "template_w90eyvi", e.target)
+            .then(function (response) {
+                alert("Mensagem enviada com sucesso!");
+            e.target.reset();
+            })
+            .catch(function (error) {
+                alert("Erro ao enviar mensagem. Tente novamente.");
+            console.log(error);
+            });
+        }
+
+            window.enviarEmail = enviarEmail;
+      })();
+    </script>
 
 </body>
 
 </html>
-
-
-<div class="lg:w-1/2">
-    <div class="bg-naka-black text-white p-8 rounded-lg shadow-md h-full"
-        style="background: linear-gradient(135deg, #3B1F4B, #121212);">
-        <!-- Cor fundo caixa de contato -->
-        <h3 class="text-2xl font-bold mb-6 text-naka-yellow">Informações de Contato</h3>
-
-        <div class="space-y-6">
-            <div class="flex items-start">
-                <div class="bg-naka-yellow rounded-full p-3 mr-4">
-                    <svg class="w-6 h-6 text-naka-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                        </path>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                    </svg>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-1">Endereço</h4>
-                    <p class="text-gray-300">R. Boleslau Paluch, 363 - Campo do Gado</p>
-                    <p class="text-gray-300">Rio Negro - PR, 83880-000</p>
-                </div>
-            </div>
-
-            <div class="flex items-start">
-                <div class="bg-naka-yellow rounded-full p-3 mr-4">
-                    <svg class="w-6 h-6 text-naka-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
-                        </path>
-                    </svg>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-1">Telefone</h4>
-                    <p class="text-gray-300">(47) 992553634</p>
-                    <p class="text-gray-300">(47) 991553634 (WhatsApp)</p>
-                </div>
-            </div>
-
-            <div class="flex items-start">
-                <div class="bg-naka-yellow rounded-full p-3 mr-4">
-                    <svg class="w-6 h-6 text-naka-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                        </path>
-                    </svg>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-1">E-mail</h4>
-                    <p class="text-gray-300">vendas@nakautomacao.com</p>
-                </div>
-            </div>
-
-            <div class="flex items-start">
-                <div class="bg-naka-yellow rounded-full p-3 mr-4">
-                    <svg class="w-6 h-6 text-naka-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-1">Horário de Atendimento</h4>
-                    <p class="text-gray-300">Segunda a Sexta: 8h às 18h</p>
-                    <p class="text-gray-300">Sábado: 8h às 12h</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-10">
-            <h4 class="font-bold text-lg mb-4">Siga-nos nas redes sociais</h4>
-            <div class="flex space-x-4">
-                <a href="https://www.linkedin.com/company/naka-automation/"
-                    class="bg-naka-gray hover:bg-naka-yellow hover:text-naka-black transition-colors duration-300 w-10 h-10 rounded-full flex items-center justify-center">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://www.instagram.com/nakautomacao/"
-                    class="bg-naka-gray hover:bg-naka-yellow hover:text-naka-black transition-colors duration-300 w-10 h-10 rounded-full flex items-center justify-center">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- CTA Section -->
-<section class="py-16 bg-naka-yellow">
-    <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row items-center justify-between">
-            <div class="mb-6 md:mb-0">
-                <h3 class="text-2xl md:text-3xl font-bold text-naka-black mb-2">Pronto para transformar sua
-                    produção?</h3>
-                <p class="text-naka-black text-lg">Entre em contato hoje mesmo e solicite uma visita técnica
-                    gratuita.</p>
-            </div>
-            <div>
-                <a href="#contact"
-                    class="bg-naka-black text-naka-yellow px-8 py-3 rounded-full font-bold inline-flex items-center hover:bg-naka-gray transition duration-300">
-                    Fale com um Especialista
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="text-white py-10" style="background: linear-gradient(135deg, #3B1F4B, #121212);">
-    <!-- Cor fundo rodapé -->
-    <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row justify-between items-center mb-8">
-            <div class="mb-6 md:mb-0">
-                <div class="flex items-center">
-                    <div class="text-naka-yellow font-bold text-3xl mr-2">NAKA</div>
-                    <div class="text-white font-light text-xl">AUTOMATION</div>
-                </div>
-                <p class="text-gray-400 mt-2">Tecnologia, Inovação e Segurança para sua Indústria</p>
-            </div>
-
-            <div class="flex flex-wrap justify-center gap-6">
-                <a href="#home" class="hover:text-naka-yellow transition">Início</a>
-                <a href="#about" class="hover:text-naka-yellow transition">Quem Somos</a>
-                <a href="#services" class="hover:text-naka-yellow transition">Serviços</a>
-                <a href="#safety" class="hover:text-naka-yellow transition">Segurança</a>
-                <a href="#contact" class="hover:text-naka-yellow transition">Contato</a>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div>
-                <h4 class="text-naka-yellow font-bold mb-4">Serviços</h4>
-                <ul class="space-y-2">
-                    <li><a href="#services" class="text-gray-400 hover:text-naka-yellow transition">Automação
-                            Industrial</a></li>
-                    <li><a href="#services" class="text-gray-400 hover:text-naka-yellow transition">Células
-                            Robóticas</a></li>
-                    <li><a href="#services" class="text-gray-400 hover:text-naka-yellow transition">Máquinas e
-                            Esteiras</a></li>
-                    <li><a href="#services" class="text-gray-400 hover:text-naka-yellow transition">Retrofit de
-                            Máquinas</a></li>
-                    <li><a href="#safety" class="text-gray-400 hover:text-naka-yellow transition">Adequação às
-                            Normas</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="text-naka-yellow font-bold mb-4">Contato</h4>
-                <ul class="space-y-2">
-                    <li class="flex items-center">
-                        <svg class="w-4 h-4 text-naka-yellow mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
-                            </path>
-                        </svg>
-                        <span class="text-gray-400">(47) 991553634</span>
-                    </li>
-                    <li class="flex items-center">
-                        <svg class="w-4 h-4 text-naka-yellow mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                            </path>
-                        </svg>
-                        <span class="text-gray-400">vendas@nakautomacao.com</span>
-                    </li>
-                    <li class="flex items-center">
-                        <svg class="w-4 h-4 text-naka-yellow mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                            </path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
-                        <span class="text-gray-400">Rio Negro - PR</span>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-
-        <hr class="border-gray-800 my-8">
-
-        <div class="flex flex-col md:flex-row justify-between items-center">
-            <p class="text-gray-400 text-sm mb-4 md:mb-0">
-                &copy; 2025 Naka Automation. Todos os direitos reservados.
-            </p>
-
-            <div class="flex space-x-6">
-                <a href="https://www.linkedin.com/company/naka-automation/"
-                    class="text-gray-400 hover:text-naka-yellow transition">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://www.instagram.com/nakautomacao/"
-                    class="text-gray-400 hover:text-naka-yellow transition">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- Back to Top Button -->
-<button id="back-to-top"
-    class="fixed bottom-6 right-6 bg-naka-yellow text-naka-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-naka-yellow-dark">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-    </svg>
-</button>
-
-<!-- JavaScript -->
-<script>
-    // Mobile Menu Toggle
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-
-    // Back to Top Button
-    const backToTopButton = document.getElementById('back-to-top');
