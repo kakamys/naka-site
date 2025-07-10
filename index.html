@@ -1290,6 +1290,17 @@
             window.enviarEmail = enviarEmail;
       })();
     </script>
+    <script>
+            document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("mobile-menu-button");
+            const menu = document.getElementById("mobile-menu");
+
+            toggleButton.addEventListener("click", function () {
+                menu.classList.toggle("hidden");
+    });
+  });
+    </script>
+
 
 </body>
 
