@@ -175,12 +175,66 @@
             transform: skewX(-15deg);
             z-index: -1;
         }
+
+        @media (max-width: 768px) {
+            #home {
+                background-size: contain !important;
+                background-position: top center !important;
+                background-repeat: no-repeat !important;
+                background-color: #121212 !important;
+                margin-top: 0 !important;
+                /* ⚠ Ajuste fino */
+                padding-top: 4.5rem !important;
+                z-index: 1 !important;
+                /* aumenta um pouco para exibir mais imagem */
+                padding-bottom: 0rem !important;
+                /* pequeno respiro embaixo */
+                height: auto !important;
+                min-height: 100vh !important;
+            }
+
+
+            #home .container {
+                background-color: #121212 !important;
+                padding: 3rem 1rem 0 1rem !important;
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
+                padding-bottom: 0rem !important;
+            }
+
+            #home h1 {
+                font-size: 1.6rem !important;
+                line-height: 2rem !important;
+                text-align: center !important;
+            }
+
+            #home p {
+                font-size: 1rem !important;
+                line-height: 1.5rem !important;
+                text-align: center !important;
+                color: #ccc !important;
+            }
+
+            #home .btn-primary,
+            #home .btn-outline {
+                font-size: 0.9rem !important;
+                padding: 0.6rem 1.2rem !important;
+                justify-content: center !important;
+                margin-bottom: 0 !important;
+            }
+
+            #home .flex.flex-col.md\:flex-row.items-center {
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+            }
+        }
     </style>
 </head>
 
 <body class="font-sans bg-gray-100 text-naka-black">
     <!-- Header/Navigation -->
-    <header class="fixed w-full bg-naka-black bg-opacity-95 text-white z-50 shadow-lg">
+    <header class="w-full bg-naka-black bg-opacity-95 text-white z-50 shadow-lg">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
